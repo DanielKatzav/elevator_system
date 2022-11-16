@@ -17,7 +17,7 @@ private:
 public:
     ElevatorsManagerClass() {};
 
-    ElevatorsManagerClass(const unsigned int number_of_elevators);
+    explicit ElevatorsManagerClass(unsigned int number_of_elevators);
 
     ~ElevatorsManagerClass() {};
 

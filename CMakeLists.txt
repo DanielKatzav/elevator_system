@@ -1,10 +1,13 @@
 cmake_minimum_required(VERSION 3.23)
 project(elevator_system)
 
+add_subdirectory(include/3rd_party/libcan)
+
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(
         include
+        include/3rd_party/libcan/include
         include/ElevatorClass
         include/ElevatorsManager
 )
@@ -24,10 +27,11 @@ add_library(${PROJECT_NAME}_lib
         ${SRC_FILES}
         )
 
-add_executable(${PROJECT_NAME} main.cpp
+add_executable(${PROJECT_NAME} src/main.cpp
         )
 
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
         ${PROJECT_NAME}_lib
+        canbus_lib
         )

@@ -4,7 +4,7 @@
 
 #include "elevators_manager_class.hpp"
 
-ElevatorsManagerClass::ElevatorsManagerClass(const unsigned int number_of_elevators)
+ElevatorsManagerClass::ElevatorsManagerClass(unsigned int number_of_elevators)
 {
 
 }
