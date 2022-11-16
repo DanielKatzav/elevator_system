@@ -2,8 +2,8 @@
 // Created by daniel on 11/16/22.
 //
 
-#ifndef ELEVTAOR_SYSTEM_ELEVATOR_CLASS_HPP
-#define ELEVTAOR_SYSTEM_ELEVATOR_CLASS_HPP
+#ifndef ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
+#define ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
 
 #include <memory>
 #include <vector>
@@ -85,4 +85,4 @@ public:
 };
 
 
-#endif //ELEVTAOR_SYSTEM_ELEVATOR_CLASS_HPP
+#endif //ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
