@@ -13,13 +13,17 @@ include_directories(
 )
 
 set(HEADER_FILES
-        include/ElevatorClass/elevator_class.hpp
-        include/ElevatorsManager/elevators_manager_class.hpp
+        include/ElevatorsManager/elevators_manager.hpp
+        include/ElevatorClass/elevator.hpp
+        include/ElevatorClass/ElevatorComponents/ElevatorCabin/elevator_cabin.hpp
+        include/ElevatorClass/ElevatorComponents/ElevatorShaft/elevator_shaft.hpp
         )
 
 set(SRC_FILES
-        include/ElevatorClass/elevator_class.cpp
-        include/ElevatorsManager/elevators_manager_class.cpp
+        include/ElevatorsManager/elevators_manager.cpp
+        include/ElevatorClass/elevator.cpp
+        include/ElevatorClass/ElevatorComponents/ElevatorCabin/elevator_cabin.cpp
+        include/ElevatorClass/ElevatorComponents/ElevatorShaft/elevator_shaft.cpp
         )
 
 add_library(${PROJECT_NAME}_lib

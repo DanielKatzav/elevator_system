@@ -2,8 +2,8 @@
 // Created by daniel on 11/16/22.
 //
 
-#ifndef ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
-#define ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
+#ifndef ELEVATOR_SYSTEM_ELEVATOR_HPP
+#define ELEVATOR_SYSTEM_ELEVATOR_HPP
 
 #include <memory>
 #include <vector>
@@ -23,16 +23,19 @@ enum ElevatorCurrentState
     GOING_DOWN
 };
 
-enum ElevatorCommands
+enum ElevatorShaftCommands
 {
     STOP,
     GO_UP,
     GO_DOWN
 };
+
 enum ElevatorControlMode
 {
+    STANDBY,
     ELEVATOR_CONTROL,
-    REMOTE_CONTROL
+    REMOTE_CONTROL,
+    EMERGENCY
 };
 
 struct ElevatorParameters
@@ -53,7 +56,7 @@ struct ElevatorParameters
     int highest_floor_ = 10;
 };
 
-class ElevatorClass
+class Elevator
 {
 private:
     std::unique_ptr<SocketCAN> canbus_socket_;
@@ -64,10 +67,10 @@ private:
 
     const ElevatorParameters elevator_parameters_;
 
-    ElevatorControlMode elevator_control_mode_;
+    ElevatorControlMode elevator_control_mode_ = ElevatorControlMode::STANDBY;
 
 public:
-    ElevatorClass(ElevatorParameters elevator_parameters);
+    Elevator(ElevatorParameters elevator_parameters);
 
 private:
 
@@ -85,4 +88,4 @@ public:
 };
 
 
-#endif //ELEVATOR_SYSTEM_ELEVATOR_CLASS_HPP
+#endif //ELEVATOR_SYSTEM_ELEVATOR_HPP

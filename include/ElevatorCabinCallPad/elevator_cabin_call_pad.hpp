@@ -1,0 +1,15 @@
+//
+// Created by daniel on 11/18/22.
+//
+
+#ifndef ELEVATOR_SYSTEM_ELEVATOR_CABIN_CALL_PAD_HPP
+#define ELEVATOR_SYSTEM_ELEVATOR_CABIN_CALL_PAD_HPP
+
+
+class ElevatorCabinCallPad
+{
+
+};
+
+
+#endif //ELEVATOR_SYSTEM_ELEVATOR_CABIN_CALL_PAD_HPP
