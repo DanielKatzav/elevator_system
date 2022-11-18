@@ -54,6 +54,8 @@ struct ElevatorParameters
     int floor_in_meters_ = 3;
     int lowest_floor_ = -2;
     int highest_floor_ = 10;
+
+    int max_weight_in_kg_ = 500;
 };
 
 class Elevator
