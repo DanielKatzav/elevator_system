@@ -20,7 +20,8 @@ enum ElevatorCurrentState
 {
     STOPPED,
     GOING_UP,
-    GOING_DOWN
+    GOING_DOWN,
+    FAULTED
 };
 
 enum ElevatorShaftCommands
